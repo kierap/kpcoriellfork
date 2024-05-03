@@ -12,7 +12,7 @@
 #' @return data.frame with columns describing the count and percentages of up/down/unperturbed genes
 #' @examples
 #' summarize_dge(GSE161650_de)
-summarize_dge <- function(df, fdr_col = "FDR", lfc_col = "logFC", fdr = 0.05, lfc = 0) {
+summarize_dge <- function(df, fdr_col = "padj", lfc_col = "Log2FoldChange", fdr = 0.05, lfc = 0) {
   stopifnot("Provided fdr_col column not in data.frame" = fdr_col %in% colnames(df))
   stopifnot("Provided lfc_col not in data.frame" = lfc_col %in% colnames(df))
 
