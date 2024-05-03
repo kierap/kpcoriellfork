@@ -33,7 +33,7 @@
 #' @export
 #' @examples
 #' plot_md(GSE161650_de, fdr = 0.01, lfc = log2(2))
-plot_md <- function(df, x = "logCPM", y = "logFC", sig_col = "FDR", lab = NULL, 
+plot_md <- function(df, x = "logCPM", y = "log2FoldChange", sig_col = "padj", lab = NULL, 
                     fdr = 0.1, lfc = 0, annotate_counts = TRUE, 
                     label_sig = FALSE, up_color = "red2", 
                     down_color = "royalblue2", nonde_color = "grey40", 
